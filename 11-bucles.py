@@ -10,7 +10,7 @@
 ## - break, else
 
 
-## Ejercicios #16 a #20
+## Ejercicios Ejercicios #8 a #10 y #16 a #20
 
 
 ## - for, sintaxis
