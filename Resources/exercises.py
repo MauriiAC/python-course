@@ -1,5 +1,5 @@
 # 1  
-#Escribir un programa que pregunte el nombre del estudiante en la consola y, después de que el usuario lo introduzca, muestre por pantalla la cadena: ¡Hola {nombre} te damos la bienvenida a Coderhouse!
+#Escribir un programa que pregunte el nombre del estudiante en la consola y, después de que el usuario lo introduzca, muestre por pantalla la cadena: ¡Hola {nombre} te damos la bienvenida!
 
 # 2  
 # Pedir que el usuario ingrese por teclado el nombre y la edad, devolver un saludo con su nombre y la edad que va a tener para el año 2030
