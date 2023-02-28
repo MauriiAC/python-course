@@ -34,3 +34,6 @@ ciudades = (
 
 # r4
 lista_personas = [("Mauricio", "Cuello", 30), ("Lionel", "Messi", 34), ("Cristiano", "Ronaldo", 34), ("Pepe", "Mujica", 40)]
+
+# r5
+paises = ['Canada', 'USA', 'Mexico', 'Australia', 'Argentina', 'China', 'India', 'Singapur', 'Croacia', 'Corea del Sur']

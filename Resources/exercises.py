@@ -33,7 +33,7 @@
 # Dada la lista 'personas' (mockups.py) devolver la cantidad de generos diferentes que hay
 
 # 9
-# Dada la lista personas, pedir al usuario que ingrese una letra y devolver 
+# Dada la lista personas en mockups.py, pedir al usuario que ingrese una letra y devolver 
 # una lista con los nombres de las personas que su nombre empieza con esa letra
 # En el caso que no haya ninguno, devolver que no existe ningún nombre con esa letra 
 
@@ -104,7 +104,7 @@
 #         debo imprimir --> "Hola! hoy va a ser un gran día"
 
 # 23 
-# Dada la lista de paises dentro de resources.py armar un programa obtenga la posición del pais con el nombre más largo
+# Dada la lista de paises dentro de mockups.py armar un programa obtenga la posición del pais con el nombre más largo
 
 # 24
 # Crear una función que reciba un número y una lista, e imprima {"Todos los valores son divisibles por {numero}"} si son todos divisibles, y {"Hay valores que no se pueden dividir por {numero}"} en caso contrario
@@ -163,8 +163,14 @@
 # en el orden correspondiente, por ej. si la lista es measures = [10, 0, 5, 10, 30, 10, 20, 30]
 # el resultado debería ser [4, 7, 6] que se corresponde con los valores [30, 30, 20] respectivamente
 
-
 # 35
+# Crear un bracket validator. La idea es que chequee que los brackets estén balanceados correctamente.
+# Los brackets válidos son los siguientes: [ ] ( ) { }
+# Ej. input: "{[]()}" --> True
+#     input: "{[(])}" --> False
+#     input: "{[([{()[]{}}])]}" --> True
+
+# 36
 # Crear un blackjack
 # https://games.washingtonpost.com/games/blackjack
 
