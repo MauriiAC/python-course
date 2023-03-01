@@ -344,3 +344,30 @@ mis_familiares = ["Juan", "Abril", "Mariela", "Jesica", "Roberto"]
 # print(bracket_validator(s3))
 
 
+# import time
+
+# my_list = list(range(1000000))
+# my_set = set(my_list)
+
+# start_time_list = time.time()
+# if 999999 in my_list:
+#     print('Found it')
+# else:
+#     print('Not found it')
+
+# end_time_list = time.time()
+# time_in_list = end_time_list-start_time_list
+# print('time searching in list: ', time_in_list)
+
+# start_time_set = time.time()
+# if 999999 in my_set:
+#     print('Found it')
+# else:
+#     print('Not found it')
+
+# end_time_set = time.time()
+# time_in_set = end_time_set-start_time_set
+# print('time searching in set: ', time_in_set)
+
+
+# print('ratio: ', time_in_list/time_in_set)
