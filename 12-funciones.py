@@ -207,13 +207,140 @@ mis_familiares = ["Juan", "Abril", "Mariela", "Jesica", "Roberto"]
 
 # cuenta(5)
 
-def factorial(num):
+# def factorial(num):
     
-    if num > 1:
-        return num * factorial(num-1)
-    else:
-        return num
+#     if num > 1:
+#         return num * factorial(num-1)
+#     else:
+#         return num
 
-print(factorial(5))
+# print(factorial(5))
 
 ## - Ejercicios #30 a #35
+# 30
+# Crear una función que reciba dos string y devuelva la posición donde se encuentra el segundo string dentro del primero
+# en caso que no se encuentre, devolver -1
+# NO ESTÁ PERMITIDO usar funciones de búsqueda como find o rfind
+# Ej "Hello, welcome to my world.", "welcome" --> 7
+
+# def pos_substr(main, sub):
+
+#     for posM, charM in enumerate(main):
+#         if ( main[posM:posM+len(sub)] == sub):
+#             return posM
+#     return -1
+
+# print(pos_substr("Hello, welcome to my world.", "white"))
+
+# 31
+# Crear una función que reciba una lista ordenado de números enteros y un número objetivo
+# la función debe devolver True si existe una combinación de dos números de la lista que 
+# sumados arrojen como resultado el número objetivo
+# Ej. [1,5,9,11,15], 10 --> True
+# Ej. [1,5,9,11,15], 11 --> False
+
+
+# def matchSuma(arr, target):
+
+    # for i, num_i in enumerate(arr):
+    #     for j, num_j in enumerate(arr[i+1:]):
+    #         if num_i + num_j == target:
+    #             return True
+    # return False
+
+
+    # start = 0
+    # end = len(arr) - 1
+
+    # while(start < end):
+    #     sum = arr[start] + arr[end]
+
+    #     if sum == target:
+    #         return True
+    #     elif sum < target:
+    #         start += 1
+    #     else:
+    #         end -= 1
+    # return False
+
+# print(matchSuma([1,5,9,11,15], 10))
+# print(matchSuma([1,5,9,11,15], 11))
+
+# 32
+# Crear una función que reciba una lista con los valores de cotización de una acción en el tiempo
+# la función debe devolver el máximo beneficio de haber comprado y vendido dicha acción
+# Ej. acciones: [4, 3, 2, 5, 11] --> mayor ganancia: 9
+
+# def maxRevenue(values):
+
+#     max = values[1] - values[0]
+
+#     for i, val_i in enumerate(values):
+
+#         for j, val_j in enumerate(values[i+1:]):
+
+#             possibleRevenue = val_j - val_i
+#             if possibleRevenue > max:
+#                 max = possibleRevenue
+#     return max
+
+# print(maxRevenue([4, 3, 2, 5, 11]))
+
+# 33
+# Crear una función que reciba una lista que puede contener listas o números como elementos
+# La función debe devolver la suma de todos los números de todas las sublistas
+# Ej. [1,2,3,4] --> 10
+# Ej. [ [2,4] , [1], [4,2,1] ] --> 14
+# Ej. [ 2, [3,4], 5, [-3, [6 , [ 4,5 ] ] ] ] --> 26
+
+
+# def sumar_lista(lista,contador):
+#     for i in lista:
+#         if type(i)==int:
+#             contador += i
+#         else:
+#             contador=sumar_lista(i,contador)
+#     return contador
+
+# lista1 = [1,2,3,4] 
+# lista2 = [ [2,4] , [1], [4,2,1] ]
+# lista3 = [ 2, [3,4], 5, [-3, [6 , [ 4,5 ] ] ] ]
+# print(f"sumar {lista1} = {sumar_lista(lista1,0)}")
+# print(f"sumar {lista2} = {sumar_lista(lista2,0)}")
+# print(f"sumar {lista3} = {sumar_lista(lista3,0)}")
+
+# 35
+# Crear un bracket validator. La idea es que chequee que los brackets estén balanceados correctamente.
+# Los brackets válidos son los siguientes: [ ] ( ) { }
+# Ej. input: "{[]()}" --> True
+#     input: "{[(])}" --> False
+#     input: "{[([{()[]{}}])]}" --> True
+
+
+# def bracket_validator(input_str: str):
+#     open_brackets = ["[", "{", "("]
+#     close_brackets = ["]", "}", ")"]
+#     brackets = []
+#     for char in input_str:
+#         if char in open_brackets:
+#             brackets.append(char)
+#         elif char in close_brackets:
+#             open_bracket = brackets.pop()
+#             if (char == "]" and open_bracket != "[") \
+#                     or (char == "}" and open_bracket != "{") \
+#                     or (char == ")" and open_bracket != "("):
+#                 return False
+
+#     if len(brackets) == 0:
+#         return True
+#     else:
+#         return False
+
+# s1 = "{[]()}"
+# s2 = "{[(])}"
+# s3 = "{[([{()[]{}}])]}"
+# print(bracket_validator(s1))
+# print(bracket_validator(s2))
+# print(bracket_validator(s3))
+
+
