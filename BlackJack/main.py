@@ -64,6 +64,7 @@ house_cards.add_card(black_jack_deck.deal())
 
 print(f'Your cards: {player_cards.show_cards()}, current_score: {player_cards.get_score()}')
 print(f'House cards: {house_cards.show_cards()}')
+print()
 
 class Match_result(Enum):
   PLAYER_WIN = 1
@@ -76,11 +77,34 @@ player_decision = input("Write 'y' to get another card, or 'n' to pass: ")
 while player_decision != 'n':
   if player_decision == 'y':
     player_cards.add_card(black_jack_deck.deal())
+    print(f'Your cards: {player_cards.show_cards()}, current_score: {player_cards.get_score()}')
+    print(f'House cards: {house_cards.show_cards()}')
+    print()
     if player_cards.get_score() > 21:
-      result = Match_result.HOUSE_WIN
+      # result = Match_result.HOUSE_WIN
       break
+    player_decision = input("Write 'y' to get another card, or 'n' to pass: ")
   else:
     print('Invalid option')
     player_decision = input("Write 'y' to get another card, or 'n' to pass: ")
+
+while not result:
+  house_cards.add_card(black_jack_deck.deal())
+  if house_cards.get_score() < 17:
+    continue
+  if house_cards.get_score() < player_cards.get_score() and player_cards.get_score() < 21:
+    continue
+  if house_cards.get_score() == player_cards.get_score():
+    result = Match_result.DRAW
+  elif house_cards.get_score() <= 21:
+    result = Match_result.HOUSE_WIN
+  else:
+    result = Match_result.PLAYER_WIN
+
+
+print(f'Your cards: {player_cards.show_cards()}, current_score: {player_cards.get_score()}')
+print(f'House cards: {house_cards.show_cards()}, current_score: {house_cards.get_score()}')
+print(result)
+
 
 
